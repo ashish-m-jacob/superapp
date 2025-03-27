@@ -2,9 +2,11 @@ import React from "react";
 import "./Login.css";
 import poster from "../assets/loginImage.png";
 import { useState } from "react";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const Login = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -44,6 +46,7 @@ const Login = () => {
       setError((error) => {
         return { ...error, username: true };
       });
+      return;
     }
 
     //email error
@@ -51,6 +54,7 @@ const Login = () => {
       setError((error) => {
         return { ...error, email: true };
       });
+      return;
     }
 
     //mobile error
@@ -58,6 +62,7 @@ const Login = () => {
       setError((error) => {
         return { ...error, mobile: true };
       });
+      return;
     }
 
     //checkbox error
@@ -65,11 +70,13 @@ const Login = () => {
       setError((error) => {
         return { ...error, terms: true };
       });
+      return;
     }
 
     localStorage.setItem("user", JSON.stringify(formData));
+    toast.success("User created successfully!");
 
-    console.log(formData);
+    navigate("/genre");
   };
 
   return (
