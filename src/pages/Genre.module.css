@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Single+Day&display=swap");
+
+.overContainer {
+  height: 100vh;
+  background-color: black;
+}
+
+.container {
+  height: 84vh;
+  display: flex;
+  color: white;
+  padding-top: 10vh;
+}
+
+.left {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.left h1 {
+  font-family: "Single Day", sans-serif;
+  color: #72db73;
+  font-size: 4.43rem;
+  margin-bottom: 7vh;
+}
+
+.left h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+.right {
+  width: 60%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 28vh 28vh 28vh;
+  align-items: center;
+  justify-content: center;
+  gap: 3vh;
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.2rem;
+}
+
+.selectedChips {
+  display: grid;
+  grid-template-columns: 25vh 25vh 25vh;
+  justify-content: center;
+  margin-top: 5vh;
+}
+
+.chip {
+  display: flex;
+  flex-direction: row;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 25px;
+}
+
+.name {
+  display: flex;
+  background-color: #148a08;
+  border-radius: 1.4rem;
+  padding: 0.7rem;
+  width: 80%;
+  justify-content: space-evenly;
+}
+
+.chipClose {
+  display: flex;
+  cursor: pointer;
+  color: grey;
+  font-weight: bolder;
+}
