@@ -1,4 +1,38 @@
 .pageContainer {
   height: 100vh;
   background-color: black;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 2.5%;
+  gap: 1rem;
+}
+
+.leftDiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.userInfo {
+  background-color: green;
+  grid-row: span 2;
+}
+
+.notes {
+  background-color: yellow;
+  grid-row: span 3;
+}
+
+.watchDetails {
+  background-color: purple;
+  grid-row: span 2;
+  grid-column: span 2;
+}
+
+.weatherInfo {
+  background-color: orange;
+}
+.rightDiv {
+  background-color: blue;
 }
