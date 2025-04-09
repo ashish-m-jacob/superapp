@@ -92,6 +92,7 @@ const Genre = () => {
     if (selected.length < 3) {
       toast.error(errorMessage);
     } else {
+      localStorage.setItem("userGenre", JSON.stringify(selected));
       navigate("/weather");
     }
   };

@@ -15,8 +15,50 @@
 }
 
 .userInfo {
-  background-color: green;
+  background-color: #5746ea;
   grid-row: span 2;
+  color: white;
+  border-radius: 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 3vh;
+}
+
+.displayPic {
+  background-image: url("../assets/userPic.png");
+  grid-row: span 2;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.personalDetails {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.genreChips {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1vh;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  padding-right: 2vh;
+}
+
+.genreChip {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #9f94ff;
+  font-family: "Poppins", sans-serif;
+  border-radius: 1rem;
+  font-size: 0.7rem;
 }
 
 .notes {
