@@ -1,3 +1,7 @@
+[contentEditable="true"] {
+  outline: none;
+}
+
 .pageContainer {
   height: 100vh;
   background-color: black;
@@ -10,8 +14,9 @@
 .leftDiv {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 15vh 15vh 15vh 15vh;
   gap: 1.5rem;
+  padding-left: 3vw;
 }
 
 .userInfo {
@@ -62,22 +67,54 @@
 }
 
 .notes {
-  background-color: yellow;
+  background-color: #f1c75b;
   grid-row: span 3;
+  font-family: "Poppins", sans-serif;
+  padding: 2rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  width: 90%;
+  border-radius: 1.25rem;
+  margin-left: 10%;
+}
+
+.notesTitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  grid-row: span 1;
+}
+
+.notesTitle h2 {
+  color: black;
+}
+
+.notesContent {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  grid-row: span 4;
+}
+
+.notesContent p {
+  color: black;
 }
 
 .watchDetails {
-  background-color: purple;
+  background-color: #1e2343;
   grid-row: span 2;
   grid-column: span 2;
+  border-radius: 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 2vh;
 }
 
 .weatherInfo {
   background-color: orange;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 4vh 5.5vh 5.5vh;
   border-radius: 1.25rem;
+  background-color: #101744;
 }
 
 .timeDate {
@@ -88,10 +125,209 @@
   align-items: center;
   background-color: #ff4ade;
   font-family: "Poppins", sans-serif;
-  font-size: 1rem;
+  font-size: 1.3rem;
   border-top-left-radius: 1.25rem;
   border-top-right-radius: 1.25rem;
 }
+
 .rightDiv {
-  background-color: blue;
+  background-color: transparent;
+  display: grid;
+  grid-template-rows: 1.2fr 0.8fr;
+  width: 80%;
+  margin-left: 3vw;
+}
+
+.imageContainer {
+  background-color: grey;
+  background-image: url("../assets/everest.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  border-top-left-radius: 1.25rem;
+  border-top-right-radius: 1.25rem;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.cardTitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  background-color: rgb(0, 0, 0, 0.75);
+  padding: 4vh;
+  font-weight: bolder;
+}
+
+.textContainer {
+  background-color: white;
+  border-bottom-right-radius: 1.25rem;
+  border-bottom-left-radius: 1.25rem;
+  padding: 1.5vw;
+}
+
+.cardText {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  color: black;
+}
+
+.weatherCond {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: white;
+}
+
+.weatherDescription {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.6rem;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weatherIconImage {
+  height: 10vh;
+}
+
+.temperature {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.windSpeed,
+.pressure,
+.windHumidity {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh;
+}
+
+.windSpeedData,
+.humidityData,
+.pressureData {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.5vw;
+}
+
+.speedIcon,
+.humidityIcon,
+.pressureIcon {
+  height: 2vh;
+}
+
+.timer {
+  background-color: #191e39;
+  border-radius: 50%;
+  height: 35vh;
+  width: 35vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  padding: 1vh;
+}
+
+.timer h2 {
+  font-size: 3rem;
+  font-weight: lighter;
+}
+
+.timerBorder {
+  height: 30vh;
+  width: 30vh;
+  border-radius: 50%;
+  border: 6px solid #ff6a6a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.adjustTimer {
+  display: grid;
+  grid-template-rows: 5vh 3vh 13vh 3vh 5vh;
+  gap: 1vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.timerTitles {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.title p {
+  font-size: 1.3rem;
+  color: #949494;
+}
+
+.upArrows,
+.downArrows {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.arrow {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.dArrow {
+  display: flex;
+  justify-content: center;
+}
+
+.upArrow,
+.downArrow {
+  height: 2vh;
+}
+.numbers {
+  display: grid;
+  grid-template-columns: 14.5vw 1vw 13vw 1vw 14.5vw;
+  font-size: 4.5rem;
+  color: white;
+}
+
+.num {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.startButton {
+  display: flex;
+  justify-content: center;
+}
+.startButton button {
+  width: 80%;
+  border-radius: 1.25rem;
+  border: none;
+  background-color: #ff6a6a;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
 }
