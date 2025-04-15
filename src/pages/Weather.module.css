@@ -5,16 +5,19 @@
 .pageContainer {
   height: 100vh;
   background-color: black;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
   padding: 2.5%;
   gap: 1rem;
 }
 
+.widgetsContainer {
+  height: 86vh;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
 .leftDiv {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 15vh 15vh 15vh 15vh;
+  grid-template-rows: 12vh 12vh 15vh 12vh 23vh;
   gap: 1.5rem;
   padding-left: 3vw;
 }
@@ -135,6 +138,7 @@
   display: grid;
   grid-template-rows: 1.2fr 0.8fr;
   width: 80%;
+  height: 86vh;
   margin-left: 3vw;
 }
 
@@ -201,6 +205,10 @@
   text-align: center;
   align-items: center;
   justify-content: space-evenly;
+}
+
+.temperature h1 {
+  font-weight: 300;
 }
 
 .windSpeed,
@@ -295,11 +303,13 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  cursor: pointer;
 }
 
 .dArrow {
   display: flex;
   justify-content: center;
+  cursor: pointer;
 }
 
 .upArrow,
@@ -330,4 +340,21 @@
   background-color: #ff6a6a;
   font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
+}
+
+.browseButton {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 2vh;
+}
+
+.nextButton {
+  width: 7vw;
+  border: none;
+  background-color: #148a08;
+  padding: 1.5vh;
+  border-radius: 1.25rem;
+  margin-right: 3.5vw;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
 }
